@@ -19,7 +19,7 @@ puk_code = "";
  */
 uint8_t
 configure_sim_card(void) {
-    if (pin_code != NULL && strlen(pin_code)) {
+    if (pin_code != NULL && strlen(pin_code)==4) {
         if (gsm_sim_pin_enter(pin_code, 1) == gsmOK) {
             return 1;
         }
